@@ -8,9 +8,9 @@
         <version>1.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>springcloud-service</artifactId>
+    <artifactId>springcloud-provider</artifactId>
     <packaging>jar</packaging>
-    <name>springcloud-service</name>
+    <name>springcloud-provider</name>
     <description>Spring Cloud Service</description>
 
     <properties>
