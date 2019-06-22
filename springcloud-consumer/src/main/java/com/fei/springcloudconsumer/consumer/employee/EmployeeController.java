@@ -36,4 +36,13 @@ public class EmployeeController {
         return restTemplate.getForObject(REST_URL + "/emp/list", List.class);
     }
 
+    /**
+     * 获取员工列表，从eureka调用服务（使用application name代替ip+端口）
+     * 1. 通过RestTemplate调用服务，get请求参数列表：url、返回值类型（参数列表写在url中）
+     * 2. 通过RestTemplate调用服务，post请求参数列表：url、参数列表、返回值类型
+     */
+    @GetMapping("/list2")
+    public List<EmployeeModel> list2() {
+        return restTemplate.getForObject("http://SPRINGCLOUD-EMPLOYEE-PROVIDER/emp/list", List.class);
+    }
 }

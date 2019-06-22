@@ -12,6 +12,8 @@ spring:
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: springcloud-employee-provider  # 应用名称，注册到服务中心
 
 #日志配置文件位置
 logging:
@@ -23,3 +25,9 @@ logging:
 #mybatis的mapper，xml文件
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
+
+#eureka服务中心的位置，作为客户端用于发现和注册服务
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/

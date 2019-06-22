@@ -1,11 +1,19 @@
 server:
-  port: 8082
+  port: 9000
 
 spring:
   #\u6307\u5B9A\u5F53\u524D\u7684\u73AF\u5883------\u5728pom\u6587\u4EF6\u4E2D\u53D6\u503C\u4F7F\u7528@profiles.active@
   profiles:
     active: @profiles.active@
+  application:
+    name: springcloud-employee-consume  # 应用名称，注册到服务中心
 
 #\u65E5\u5FD7\u914D\u7F6E\u6587\u4EF6\u4F4D\u7F6E
 logging:
   config: classpath:log4j/${spring.profiles.active}/log4j2.xml
+
+#eureka服务中心的位置，作为客户端用于发现和注册服务
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/

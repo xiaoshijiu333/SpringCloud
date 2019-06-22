@@ -8,9 +8,9 @@
         <version>1.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>springcloud-consumer</artifactId>
-    <name>springcloud-consumer</name>
-    <description>Spring Cloud Consumer</description>
+    <artifactId>springcloud-eureka-service</artifactId>
+    <name>springcloud-eureka-service</name>
+    <description>Spring Cloud Euraka Service Center</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -41,44 +41,18 @@
             </exclusions>
             <scope>test</scope>
         </dependency>
-
-        <!-- 工具common -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-collections4</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fei</groupId>
-            <artifactId>springcloud-common</artifactId>
-            <version>1.0</version>
-        </dependency>
-
         <!--再单独引入log4j2-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
-        <!-- lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
 
+        <!-- eureka服务注册中心 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
             <!-- 这里会自动引入版本，类似parent标签继承 -->
         </dependency>
-
     </dependencies>
 
     <dependencyManagement>
@@ -129,5 +103,4 @@
             </properties>
         </profile>
     </profiles>
-
 </project>
