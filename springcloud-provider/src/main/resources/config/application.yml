@@ -24,7 +24,7 @@ logging:
 
 #mybatis的mapper，xml文件
 mybatis:
-  mapper-locations: classpath:/mapper/*.xml
+  mapper-locations: classpath:mapper/*.xml
 
 #eureka服务中心的位置，作为客户端用于发现和注册服务
 eureka:
