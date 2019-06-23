@@ -29,9 +29,7 @@ public class EmployeeController {
     @GetMapping("/list")
     public List<EmployeeModel> list() {
         // 使用阿里巴巴的fastjson进行集合中对象的模型转换
-        List<EmployeeModel> employeeModels = JSON
-                .parseArray(JSON.toJSONString(employeeService.list()), EmployeeModel.class);
-        return employeeModels;
+        return JSON.parseArray(JSON.toJSONString(employeeService.list()), EmployeeModel.class);
     }
 
 }

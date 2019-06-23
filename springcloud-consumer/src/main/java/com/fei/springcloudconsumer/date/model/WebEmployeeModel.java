@@ -25,6 +25,6 @@ public class WebEmployeeModel {
      * 性别描述
      */
     private String employeeSexDesc;
-    @JsonFormat(pattern = DateConstant.DATE_fORMAT1, timezone = DateConstant.TIME_ZONE)
+    @JsonFormat(pattern = DateConstant.DATE_FORMAT1, timezone = DateConstant.TIME_ZONE)
     private Date createTime;
 }

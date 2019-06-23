@@ -25,7 +25,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         example.createCriteria().andEqualTo(Employee.DELETE_TIME, Employee.DELETE_TIME_NO);
         // 创建时间倒叙
         example.orderBy(Employee.CREATE_TIME).desc();
-        List<Employee> employees = emplMapper.selectByExample(example);
-        return employees;
+        return emplMapper.selectByExample(example);
     }
 }
