@@ -8,7 +8,7 @@ spring:
   #数据源
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springcloud?characterEncoding=utf-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/springcloud-provide-8002?characterEncoding=utf-8&serverTimezone=GMT%2B8
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -20,7 +20,7 @@ logging:
   config: classpath:log4j/${spring.profiles.active}/log4j2.xml
   #开启打印sql
   level:
-    com.fei.springcloudprovide8002.data.mapper: debug
+    com.fei.springcloudprovider8002.data.mapper: debug
 
 #mybatis的mapper，xml文件
 mybatis:

@@ -1,8 +1,6 @@
 package com.fei.springcloudprovide8001.webservice;
 
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
-import com.fei.springcloudprovide8001.config.log.Loggable;
 import com.fei.springcloudprovide8001.employee.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,13 +16,10 @@ import com.fei.common.model.employee.EmployeeModel;
  */
 @RestController
 @RequestMapping("/emp")
-public class EmployeeController implements Loggable {
+public class EmployeeController{
 
     @Autowired
     private EmployeeService employeeService;
-
-    @Autowired
-    private HttpServletRequest request;
 
     /**
      * 查询员工列表
@@ -32,8 +27,6 @@ public class EmployeeController implements Loggable {
      */
     @GetMapping("/list")
     public List<EmployeeModel> list() {
-        // 日志一下url地址
-        getLog().info(request.getRequestURL().toString());
         // 使用阿里巴巴的fastjson进行集合中对象的模型转换
         return JSON.parseArray(JSON.toJSONString(employeeService.list()), EmployeeModel.class);
     }
