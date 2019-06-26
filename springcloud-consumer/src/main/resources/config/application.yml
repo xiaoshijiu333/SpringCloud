@@ -15,5 +15,6 @@ logging:
 #eureka服务中心的位置，作为客户端用于发现和注册服务
 eureka:
   client:
+    register-with-eureka: false  #表示不向注册中心注册自己（消费者不需要注册自己）
     service-url:
       defaultZone: http://localhost:7000/eureka/

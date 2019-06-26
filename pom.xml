@@ -24,6 +24,9 @@
         <module>springcloud-provider</module>
         <module>springcloud-consumer</module>
         <module>springcloud-eureka-service</module>
+        <module>springcloud-eureka-service-7001</module>
+        <module>springcloud-provide-8001</module>
+        <module>springcloud-provider-8002</module>
     </modules>
 
     <dependencyManagement>

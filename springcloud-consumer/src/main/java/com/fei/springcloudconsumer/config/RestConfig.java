@@ -17,7 +17,7 @@ public class RestConfig {
      * 向容器里面添加RestTemplate组件
      */
     @Bean
-    @LoadBalanced //这个注解下RestTemplate才能向eureka中心调用服务
+    @LoadBalanced //这个注解下RestTemplate才能向eureka中心调用服务（负载均衡）
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }

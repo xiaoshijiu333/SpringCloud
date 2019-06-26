@@ -1,12 +1,12 @@
 server:
-  port: 7000
+  port: 7001
 
 spring:
   #指定当前的环境------在pom文件中取值使用@profiles.active@
   profiles:
     active: @profiles.active@
   application:
-    name: springcloud-eureka-service-7000
+    name: springcloud-eureka-service-7001
 
 #日志配置文件位置
 logging:
@@ -15,9 +15,9 @@ logging:
 #eureka配置
 eureka:
   instance:
-    hostname: localhost
+    hostname: feiyu
   client:
     register-with-eureka: false  #表示不向注册中心注册自己
     fetch-registry: false  #表示不向注册中心检索信息（自己就是注册中心）
     service-url:
-      defaultZone: http://feiyu:7001/eureka/     #其他注册中心地址，方便相互注册（集群情况下）
+      defaultZone: http://localhost:7000/eureka/    #其他注册中心地址，方便相互注册（集群情况下）

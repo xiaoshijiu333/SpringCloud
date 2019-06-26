@@ -33,8 +33,9 @@ public class EmployeeController {
     private RestTemplate restTemplate;
 
     /**
-     * 获取员工列表，调用服务 1. 通过RestTemplate调用服务，get请求参数列表：url、返回值类型（参数列表写在url中） 2.
-     * 通过RestTemplate调用服务，post请求参数列表：url、参数列表、返回值类型
+     * 获取员工列表，调用服务
+     * 1. 通过RestTemplate调用服务，get请求参数列表：url、返回值类型（参数列表写在url中）
+     * 2. 通过RestTemplate调用服务，post请求参数列表：url、参数列表、返回值类型
      */
     @GetMapping("/list")
     public List<EmployeeModel> list() {
@@ -42,9 +43,9 @@ public class EmployeeController {
     }
 
     /**
-     * 获取员工列表，从eureka调用服务（使用application name代替ip+端口） 1.
-     * 通过RestTemplate调用服务，get请求参数列表：url、返回值类型（参数列表写在url中） 2.
-     * 通过RestTemplate调用服务，post请求参数列表：url、参数列表、返回值类型
+     * 获取员工列表，从eureka调用服务（使用application name代替ip+端口）
+     * 1. 通过RestTemplate调用服务，get请求参数列表：url、返回值类型（参数列表写在url中），返回值类型是指以什么类型接受响应体内容
+     * 2. 通过RestTemplate调用服务，post请求参数列表：url、参数列表、返回值类型
      */
     @GetMapping("/list2")
     public List<WebEmployeeModel> list2() {
@@ -56,6 +57,7 @@ public class EmployeeController {
         List<WebEmployeeModel> webEmployeeModels = new ArrayList<>();
         employeeModels.forEach(employeeModel -> {
             WebEmployeeModel webEmployeeModel = new WebEmployeeModel();
+            // 使用Spring的工具进行属性拷贝
             BeanUtils.copyProperties(employeeModel, webEmployeeModel, WebEmployeeModel.class);
             // 性别描述
             webEmployeeModel.setEmployeeSexDesc(

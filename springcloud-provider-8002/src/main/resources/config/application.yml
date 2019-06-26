@@ -1,5 +1,5 @@
 server:
-  port: 8000
+  port: 8002
 
 spring:
   #指定当前的环境------在pom文件中取值使用@profiles.active@
@@ -13,14 +13,14 @@ spring:
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
   application:
-    name: springcloud-employee-provider  # 应用名称，注册到服务中心
+    name: springcloud-employee-provider  # 应用名称，注册到服务中心（集群情况下名称一致）
 
 #日志配置文件位置
 logging:
   config: classpath:log4j/${spring.profiles.active}/log4j2.xml
   #开启打印sql
   level:
-    com.fei.springcloudservice.data.mapper: debug
+    com.fei.springcloudprovide8002.data.mapper: debug
 
 #mybatis的mapper，xml文件
 mybatis:

@@ -1,16 +1,15 @@
-package com.fei.springcloudservice.webservice;
+package com.fei.springcloudprovide8001.webservice;
 
-import com.alibaba.fastjson.JSON;
-import com.fei.common.model.employee.EmployeeModel;
-import com.fei.springcloudservice.config.log.Loggable;
-import com.fei.springcloudservice.service.employee.EmployeeService;
+import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import com.fei.springcloudprovide8001.config.log.Loggable;
+import com.fei.springcloudprovide8001.employee.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpServletRequest;
-import java.util.List;
+import com.alibaba.fastjson.JSON;
+import com.fei.common.model.employee.EmployeeModel;
 
 /**
  * @Author: xiaoshijiu
