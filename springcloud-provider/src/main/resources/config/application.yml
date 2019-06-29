@@ -31,3 +31,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7000/eureka/ , http://feiyu:7001/eureka/
+
+#监控的info信息
+info:
+  application.name: springcloud-provide-8000
+  build.groupId: @project.groupId@
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@

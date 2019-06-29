@@ -123,6 +123,12 @@
             <!-- 这里会自动引入版本，类似parent标签继承 -->
         </dependency>
 
+        <!-- 监控 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
