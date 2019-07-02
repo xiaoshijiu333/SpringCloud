@@ -84,6 +84,13 @@
             <!-- 这里会自动引入版本，类似parent标签继承 -->
         </dependency>
 
+        <!-- 其实上面引入eureka的时候已经自动引入了ribbon相关依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <!-- 这里会自动引入版本，类似parent标签继承 -->
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
