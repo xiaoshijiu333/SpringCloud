@@ -56,9 +56,10 @@
             <artifactId>commons-collections4</artifactId>
         </dependency>
 
+        <!-- feign接口，以及公共common -->
         <dependency>
             <groupId>com.fei</groupId>
-            <artifactId>springcloud-common</artifactId>
+            <artifactId>springcloud-interface-feign</artifactId>
             <version>1.0</version>
         </dependency>
 
@@ -88,6 +89,13 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <!-- 这里会自动引入版本，类似parent标签继承 -->
+        </dependency>
+
+        <!-- feign依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
             <!-- 这里会自动引入版本，类似parent标签继承 -->
         </dependency>
 
