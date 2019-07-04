@@ -21,3 +21,6 @@ eureka:
     fetch-registry: false  #表示不向注册中心检索信息（自己就是注册中心）
     service-url:
       defaultZone: http://localhost:7000/eureka/    #其他注册中心地址，方便相互注册（集群情况下）
+  server:
+    enable-self-preservation: false   #关闭自我保护机制，也将实际上已经停止服务的实例无法从注册中心剔除（开发阶段关闭，实际上线不推荐关闭）
+    eviction-interval-timer-in-ms: 10000  # 注册中心清理实例间隔，单位毫秒

@@ -1,4 +1,4 @@
-package com.fei.springcloudconsumer.config;
+package com.fei.ribbon.config;
 
 import com.fei.springcloudconsumer.config.log.Loggable;
 import com.netflix.client.config.IClientConfig;
@@ -12,7 +12,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @Author: xiaoshijiu
  * @Date: 2019/7/2
- * @Description: 自定义负载均衡算法，每个服务轮询3次
+ * @Description: 自定义负载均衡算法，每个服务轮询3次。 官方文档指出：
+ *               这个自定义的类不能放在@ComponentScan所扫描的当前包以及子包下，
+ *               否则我们自定义的这个配置类就会被所有的Ribbon客户端所共享， 也就是我们达不到特殊化指定的目的了。
  */
 public class MyRule extends AbstractLoadBalancerRule implements Loggable {
 
