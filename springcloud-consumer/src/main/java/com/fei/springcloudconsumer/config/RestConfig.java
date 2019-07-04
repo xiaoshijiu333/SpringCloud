@@ -1,7 +1,6 @@
 package com.fei.springcloudconsumer.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -10,10 +9,10 @@ import org.springframework.web.client.RestTemplate;
  * @Author: xiaoshijiu
  * @Date: 2019/6/21
  * @Description: RestTemplate配置类
- * @RibbonClient: 加载自己的自定义算法（指定为某个服务）
+ * @RibbonClient: 加载自己的自定义算法（指定为某个服务），Eureka环境下可以不使用这个申明，也起作用
  */
 @Configuration
-@RibbonClient(name = "SPRINGCLOUD-EMPLOYEE-PROVIDER", configuration = MyRule.class)
+//@RibbonClient(name = "SPRINGCLOUD-EMPLOYEE-PROVIDER", configuration = MyRule.class)
 public class RestConfig {
 
     /**
