@@ -17,13 +17,15 @@ import java.util.Optional;
 /**
  * @Author: xiaoshijiu
  * @Date: 2019/7/4
- *
  * @Description: feign组件，消费服务接口
  */
 @RestController
 @RequestMapping("/consume/feign/empl")
 public class EmployeeFeignController {
 
+    /**
+     * 使用了Feign，就像调用本地方法一样，调用远程HTTP请求
+     */
     @Autowired
     private EmployeeWebService employeeWebService;
 
