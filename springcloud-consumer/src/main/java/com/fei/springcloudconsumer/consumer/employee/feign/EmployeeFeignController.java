@@ -1,5 +1,6 @@
 package com.fei.springcloudconsumer.consumer.employee.feign;
 
+import com.fei.common.data.ApiResult;
 import com.fei.common.enums.SexEnum;
 import com.fei.common.model.employee.EmployeeModel;
 import com.fei.springcloudconsumer.date.model.WebEmployeeModel;
@@ -33,7 +34,7 @@ public class EmployeeFeignController {
      * 获取员工列表，使用feign组件
      */
     @GetMapping("/list")
-    public List<WebEmployeeModel> list2() {
+    public ApiResult<List<WebEmployeeModel>> list2() {
         List<EmployeeModel> employeeModels = employeeWebService.list();
         // 将json字符串转集合
         List<WebEmployeeModel> webEmployeeModels = new ArrayList<>();
@@ -47,6 +48,6 @@ public class EmployeeFeignController {
                             .map(SexEnum::getSexDesc).orElse("未知"));
             webEmployeeModels.add(webEmployeeModel);
         });
-        return webEmployeeModels;
+        return ApiResult.ok(webEmployeeModels);
     }
 }
