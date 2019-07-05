@@ -33,26 +33,18 @@ public class ApiResult<T> {
     }
 
     public static <T> ApiResult ok(T model) {
-        ApiResult<T> result = new ApiResult<>(StatusConstant.SUCCESS_CODE,
-                StatusConstant.SUCCESS_MESSAGE, model);
-        return result;
+        return new ApiResult<>(StatusConstant.SUCCESS_CODE, StatusConstant.SUCCESS_MESSAGE, model);
     }
 
     public static ApiResult ok() {
-        ApiResult result = new ApiResult<>(StatusConstant.SUCCESS_CODE,
-                StatusConstant.SUCCESS_MESSAGE, null);
-        return result;
+        return new ApiResult<>(StatusConstant.SUCCESS_CODE, StatusConstant.SUCCESS_MESSAGE, null);
     }
 
     public static ApiResult fail() {
-        ApiResult result = new ApiResult<>(StatusConstant.FAILURE_CODE,
-                StatusConstant.FAILTURE_MESSAGE, null);
-        return result;
+        return new ApiResult<>(StatusConstant.FAILURE_CODE, StatusConstant.FAILTURE_MESSAGE, null);
     }
 
     public static <T> ApiResult fail(T model) {
-        ApiResult<T> result = new ApiResult<>(StatusConstant.FAILURE_CODE,
-                StatusConstant.FAILTURE_MESSAGE, model);
-        return result;
+        return new ApiResult<>(StatusConstant.FAILURE_CODE, StatusConstant.FAILTURE_MESSAGE, model);
     }
 }
