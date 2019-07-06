@@ -6,7 +6,7 @@ spring:
   profiles:
     active: @profiles.active@
   application:
-    name: springcloud-employee-consume  # 应用名称，注册到服务中心
+    name: springcloud-employee-client-feign  # 应用名称，注册到服务中心
 
 #日志配置文件位置
 logging:

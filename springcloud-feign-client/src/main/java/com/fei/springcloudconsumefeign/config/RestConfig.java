@@ -1,12 +1,12 @@
-package com.fei.springcloudconsumer.config;
+package com.fei.springcloudconsumefeign.config;
 
-import com.fei.common.constant.ServerContant;
-import com.fei.ribbon.config.MyRule;
+import com.fei.feign.ribbon.config.MyRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
+import com.fei.common.constant.ServerContant;
 
 /**
  * @Author: xiaoshijiu
@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
  * @RibbonClient: 指定为某个服务加载自己的自定义算法（没有该注解的话表明对所有服务生效）
  */
 @Configuration
-@RibbonClient(name = ServerContant.SERVER_PROVIDER_BEFORE, configuration = MyRule.class)
+@RibbonClient(name = ServerContant.SERVER_PROVIDER, configuration = MyRule.class)
 public class RestConfig {
 
     /**

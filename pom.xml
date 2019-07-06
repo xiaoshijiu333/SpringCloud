@@ -23,6 +23,7 @@
         <module>springcloud-interface-feign</module>
         <module>springcloud-provider</module>
         <module>springcloud-consumer</module>
+        <module>springcloud-feign-client</module>
         <module>springcloud-eureka-service</module>
         <module>springcloud-eureka-service-7001</module>
         <module>springcloud-provide-8001</module>

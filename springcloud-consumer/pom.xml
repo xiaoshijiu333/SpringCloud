@@ -59,7 +59,7 @@
         <!-- feign接口，以及公共common -->
         <dependency>
             <groupId>com.fei</groupId>
-            <artifactId>springcloud-interface-feign</artifactId>
+            <artifactId>springcloud-common</artifactId>
             <version>1.0</version>
         </dependency>
 

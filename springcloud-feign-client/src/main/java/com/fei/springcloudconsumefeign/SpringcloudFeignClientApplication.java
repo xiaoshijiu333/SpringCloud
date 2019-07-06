@@ -1,4 +1,4 @@
-package com.fei.springcloudconsumer;
+package com.fei.springcloudconsumefeign;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,10 +7,12 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableEurekaClient // 开启向服务中心eureka发现和注册服务
-public class SpringcloudConsumerApplication {
+// 需要将feign接口所在包写上
+@EnableFeignClients(basePackages = "feign.webservice")
+public class SpringcloudFeignClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringcloudConsumerApplication.class, args);
+        SpringApplication.run(SpringcloudFeignClientApplication.class, args);
     }
 
 }

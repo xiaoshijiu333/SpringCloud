@@ -1,19 +1,19 @@
-package com.fei.springcloudconsumer.consumer.employee.feign;
+package com.fei.springcloudconsumefeign.consumer.employee.feign;
 
-import com.fei.common.data.ApiResult;
-import com.fei.common.enums.SexEnum;
-import com.fei.common.model.employee.EmployeeModel;
-import com.fei.springcloudconsumer.date.model.WebEmployeeModel;
-import feign.webservice.EmployeeWebService;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import com.fei.springcloudconsumefeign.date.model.WebEmployeeModel;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import com.fei.common.data.ApiResult;
+import com.fei.common.enums.SexEnum;
+import com.fei.common.model.employee.EmployeeModel;
+import feign.webservice.EmployeeWebService;
 
 /**
  * @Author: xiaoshijiu
