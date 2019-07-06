@@ -2,7 +2,7 @@ package com.fei.feign.ribbon.config;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-import com.fei.springcloudconsumefeign.config.log.Loggable;
+import com.fei.springcloudfeignclient.config.log.Loggable;
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AbstractLoadBalancerRule;
 import com.netflix.loadbalancer.ILoadBalancer;

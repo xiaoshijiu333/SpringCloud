@@ -1,4 +1,4 @@
-package com.fei.springcloudconsumefeign.config;
+package com.fei.springcloudfeignclient.config;
 
 import com.fei.feign.ribbon.config.MyRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;

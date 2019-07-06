@@ -1,4 +1,4 @@
-package com.fei.springcloudconsumefeign;
+package com.fei.springcloudfeignclient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

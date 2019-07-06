@@ -1,4 +1,4 @@
-package com.fei.springcloudconsumefeign.date.model;
+package com.fei.springcloudfeignclient.date.model;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.fei.springcloudconsumefeign.config.log;
+package com.fei.springcloudfeignclient.config.log;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

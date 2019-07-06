@@ -1,10 +1,10 @@
-package com.fei.springcloudconsumefeign.consumer.employee.feign;
+package com.fei.springcloudfeignclient.consumer.employee.feign;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import com.fei.springcloudconsumefeign.date.model.WebEmployeeModel;
+import com.fei.springcloudfeignclient.date.model.WebEmployeeModel;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
