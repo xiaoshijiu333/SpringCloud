@@ -27,6 +27,9 @@
         <module>springcloud-eureka-service-7001</module>
         <module>springcloud-provide-8001</module>
         <module>springcloud-provider-8002</module>
+        <module>springcloud-service-feign-8000</module>
+        <module>springcloud-service-feign-8001</module>
+        <module>springcloud-service-feign-8002</module>
     </modules>
 
     <dependencyManagement>

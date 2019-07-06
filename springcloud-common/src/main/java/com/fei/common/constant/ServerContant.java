@@ -16,7 +16,8 @@ public class ServerContant {
     /**
      * 服务提供者的application.name
      */
-    public static final String SERVER_PROVIDER = "SPRINGCLOUD-EMPLOYEE-PROVIDER";
+    public static final String SERVER_PROVIDER = "SPRINGCLOUD-EMPLOYEE-PROVIDER-FEIGN";
+    public static final String SERVER_PROVIDER_BEFORE = "SPRINGCLOUD-EMPLOYEE-PROVIDER-FEIGN";
 
     /**
      * 服务提供者的url

@@ -45,7 +45,7 @@ public class EmployeeController {
     @GetMapping("/list2")
     public List<WebEmployeeModel> list2() {
         // 将响应体内容以String格式接受，即json字符串
-        String json = restTemplate.getForObject(ServerContant.SERVER_PROVIDER + "/emp/list",
+        String json = restTemplate.getForObject(ServerContant.SERVER_PROVIDER_BEFORE + "/emp/list",
                 String.class);
         // 将json字符串转集合
         List<EmployeeModel> employeeModels = JSON.parseArray(json, EmployeeModel.class);
