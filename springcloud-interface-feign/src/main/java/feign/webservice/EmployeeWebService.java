@@ -13,7 +13,7 @@ import java.util.List;
  * @Author: xiaoshijiu
  * @Date: 2019/7/4
  * @Description: 员工feign接口
- * @FeignClient: name表示为哪个服务配置feign申明式服务调用
+ * @FeignClient: name表示为哪个服务配置feign申明式服务调用，fallback表示服务出现异常或者超时时去执行的类
  */
 @FeignClient(name = ServerContant.SERVER_PROVIDER, fallback = EmployeeFallBack.class)
 @RequestMapping("/feign/empl")
