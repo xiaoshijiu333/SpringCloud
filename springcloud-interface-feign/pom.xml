@@ -26,6 +26,14 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <!-- 这里会自动引入版本，类似parent标签继承 -->
         </dependency>
+
+        <!-- hystrix熔断 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <!-- 这里会自动引入版本，类似parent标签继承 -->
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>

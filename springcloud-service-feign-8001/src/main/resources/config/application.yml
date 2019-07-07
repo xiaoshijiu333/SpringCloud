@@ -29,8 +29,9 @@ mybatis:
 #eureka服务中心的位置，作为客户端用于发现和注册服务
 eureka:
   instance:
-    lease-expiration-duration-in-seconds: 10   # 默认90秒，续约到期时间（注销实例时间）（开发阶段配置，实际上线推荐默认）
-    lease-renewal-interval-in-seconds: 3       # 默认30秒，续约更新时间间隔（心跳周期）（开发阶段配置，实际上线推荐默认）
+    instance-id: ${info.application.name}
+#    lease-expiration-duration-in-seconds: 10   # 默认90秒，续约到期时间（注销实例时间）（开发阶段配置，实际上线推荐默认）
+#    lease-renewal-interval-in-seconds: 3       # 默认30秒，续约更新时间间隔（心跳周期）（开发阶段配置，实际上线推荐默认）
   client:
     service-url:
       defaultZone: http://localhost:7000/eureka/ , http://feiyu:7001/eureka/
