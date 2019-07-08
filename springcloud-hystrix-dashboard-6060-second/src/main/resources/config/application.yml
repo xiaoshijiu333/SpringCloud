@@ -1,0 +1,14 @@
+server:
+  port: 6060
+
+spring:
+  #指定当前的环境------在pom文件中取值使用@profiles.active@
+  profiles:
+    active: @profiles.active@
+  application:
+    name: springcloud-hystrix-dashboard
+
+#日志配置文件位置
+logging:
+  config: classpath:log4j/${spring.profiles.active}/log4j2.xml
+
