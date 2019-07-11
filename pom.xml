@@ -32,6 +32,7 @@
         <module>springcloud-service-feign-8001</module>
         <module>springcloud-service-feign-8002</module>
         <module>springcloud-hystrix-dashboard-6060-second</module>
+        <module>springcloud-zuul-5000</module>
     </modules>
 
     <dependencyManagement>

@@ -14,8 +14,10 @@ logging:
 
 #eureka服务中心的位置，作为客户端用于发现和注册服务
 eureka:
+  instance:
+    instance-id: ${info.application.name}
   client:
-    register-with-eureka: false  #表示不向注册中心注册自己（消费者不需要注册自己）
+#    register-with-eureka: false  #表示不向注册中心注册自己（消费者不需要注册自己）
     service-url:
       defaultZone: http://localhost:7000/eureka/ , http://feiyu:7001/eureka/
 
@@ -25,10 +27,22 @@ feign:
     enabled: true
 
 # hystrix超时时间配置
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 2000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+
+# ribbon连接超时
+ribbon:
+  readTimeout: 2000
+  connectTimeout: 2000
+
+#监控的info信息
+info:
+  application.name: springcloud-feign-client
+  build.groupId: @project.groupId@
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@

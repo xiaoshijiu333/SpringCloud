@@ -1,0 +1,50 @@
+server:
+  port: 5000
+
+spring:
+  #指定当前的环境------在pom文件中取值使用@profiles.active@
+  profiles:
+    active: @profiles.active@
+  application:
+    name: springcloud-zuul-5000
+
+#日志配置文件位置
+logging:
+  config: classpath:log4j/${spring.profiles.active}/log4j2.xml
+
+# 注册到Eureka中
+eureka:
+  instance:
+    instance-id: ${info.application.name}
+  # lease-expiration-duration-in-seconds: 10   # 默认90秒，续约到期时间（注销实例时间）（开发阶段配置，实际上线推荐默认）
+  # lease-renewal-interval-in-seconds: 3       # 默认30秒，续约更新时间间隔（心跳周期）（开发阶段配置，实际上线推荐默认）
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/ , http://feiyu:7001/eureka/
+
+
+#监控的info信息
+info:
+  application.name: springcloud-zuul-5000
+  build.groupId: @project.groupId@
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
+
+# 网关转发配置
+zuul:
+  routes: # 提供映射规则
+    fei: # map的key值,任意即可
+      path: /fei/** # 映射路径
+      serviceId: springcloud-employee-client-feign  # 服务名
+    yu:
+      path: /yu/** # 映射路径
+      serviceId: springcloud-employee-provider-feign  # 服务名
+  ignored-services: "*"  # 忽略所有的服务,即不能使用服务id访问
+#  host:
+#    connect-timeout-millis: 3000 # 超时时间
+##    socket-timeout-millis: 10000
+
+# ribbon连接超时(此处设置ribbon的超时时间即可)
+ribbon:
+  readTimeout: 2000
+  connectTimeout: 2000
