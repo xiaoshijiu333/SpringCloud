@@ -39,6 +39,9 @@ zuul:
     yu:
       path: /yu/** # 映射路径
       serviceId: springcloud-employee-provider-feign  # 服务名
+    test: # 用于测试
+      path: /fortest/**
+      serviceId: springcloud-employee-client-feign
   ignored-services: "*"  # 忽略所有的服务,即不能使用服务id访问
 #  host:
 #    connect-timeout-millis: 3000 # 超时时间

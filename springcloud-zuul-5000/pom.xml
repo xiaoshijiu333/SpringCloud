@@ -67,6 +67,13 @@
             <!-- 这里会自动引入版本，类似parent标签继承 -->
         </dependency>
 
+        <!-- common -->
+        <dependency>
+            <groupId>com.fei</groupId>
+            <artifactId>springcloud-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
