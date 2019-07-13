@@ -52,7 +52,7 @@ public class MyTestFilter extends ZuulFilter implements Loggable {
         RequestContext ctx = RequestContext.getCurrentContext();
         String uri = ctx.getRequest().getRequestURI();
         // 这里指定一下具体执行的路径
-        if (uri.indexOf("fortest") != -1) {
+        if (uri.indexOf("/static") != -1) {
             return true;
         }
         return false;
