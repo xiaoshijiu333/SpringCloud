@@ -1,0 +1,20 @@
+# bootstrap.yml文件会在application.yml之前加载，是引导上下文文件，注意不能使用@@在pom中取值
+
+spring:
+  application:
+    name: springcloud-zuul-config-5001
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: springcloud-config-server  # 因为注册到了Eureka中，所以这里通过ServiceId指定服务名
+      profile: dev  # 则检索的文件名为 springcloud-zuul-config-5001-dev.yml
+      label: master # 指定git分支（没有默认值，必须要指定一下）
+
+# 注册到Eureka中
+eureka:
+  instance:
+    instance-id: springcloud-zuul-config-5001
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/ , http://feiyu:7001/eureka/

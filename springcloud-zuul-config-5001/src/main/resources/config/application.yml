@@ -1,0 +1,38 @@
+server:
+  port: 5001
+
+spring:
+  #指定当前的环境------在pom文件中取值使用@profiles.active@
+  profiles:
+    active: @profiles.active@
+
+#日志配置文件位置
+logging:
+  config: classpath:log4j/${spring.profiles.active}/log4j2.xml
+
+# 注册到Eureka中
+eureka:
+  instance:
+    instance-id: ${info.application.name}
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/ , http://feiyu:7001/eureka/
+
+
+# 监控的info信息
+info:
+  application.name: springcloud-zuul-config-5001
+  build.groupId: @project.groupId@
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
+
+# 配置actuator端点，2.0之后只打开了info和health，其他需要手动配置
+management:  #actuator
+  server:
+    port: 5001
+  endpoints:
+    web:
+      #      base-path: / #默认是/actuator 前缀，可以在这里修改
+      exposure:
+#        include: "*"  #打开全部请求端点
+        include: refresh,health,info #打开部分
