@@ -34,7 +34,7 @@ eureka:
 #    lease-renewal-interval-in-seconds: 3       # 默认30秒，续约更新时间间隔（心跳周期）（开发阶段配置，实际上线推荐默认）
   client:
     service-url:
-      defaultZone: http://localhost:7000/eureka/ , http://feiyu:7001/eureka/
+      defaultZone: http://localhost:7000/eureka/,http://feiyu:7001/eureka/
 
 #监控的info信息
 info:

@@ -10,15 +10,6 @@ spring:
 logging:
   config: classpath:log4j/${spring.profiles.active}/log4j2.xml
 
-# 注册到Eureka中
-eureka:
-  instance:
-    instance-id: ${info.application.name}
-  client:
-    service-url:
-      defaultZone: http://localhost:7000/eureka/ , http://feiyu:7001/eureka/
-
-
 # 监控的info信息
 info:
   application.name: springcloud-zuul-config-5001
