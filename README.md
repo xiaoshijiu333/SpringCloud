@@ -7,7 +7,9 @@ SpringCloud入门学习
 5. Feign使用方式——服务提供者实现接口的形式
 6. 添加Hystrix和Hystrix Dashboard
 7. 添加zuul路由转发
-8.  -   springcloud-common：公共类，工具
+8. 建立配置中心服务端以及zuul配置客户端
+9.  -   springcloud-common：公共类，工具
+    -   springcloud-config-server：配置管理服务端
     -   springcloud-consumer：使用Restemplate的消费端
     -   springcloud-eureka-service：Eureka注册中心，端口7000
     -   springcloud-eureka-service-7001：Eureka注册中心，端口7001
@@ -21,3 +23,4 @@ SpringCloud入门学习
     -   springcloud-service-feign-8001：使用feign的服务提供者，端口8001
     -   springcloud-service-feign-8002：使用feign的服务提供者，端口8002
     -   springcloud-zuul-5000：使用zuul路由转发
+    -   springcloud-zuul-config-5001：配置管理客户端（zuul）
