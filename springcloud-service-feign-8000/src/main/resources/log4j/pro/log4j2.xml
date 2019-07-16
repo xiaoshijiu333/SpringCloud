@@ -2,8 +2,8 @@
 <configuration>
     <appenders>
         <!-- fileName：输出路径  filePattern：命名规则（回滚的新文件命名规则） -->
-        <RollingFile name="file" fileName="/logs/springcloud/service.log"
-                     filePattern="/logs/springcloud/service-%d{yyyy-MM-dd}-%i.log">
+        <RollingFile name="file" fileName="/logs/springcloud-service-feign-8000/service.log"
+                     filePattern="/logs/springcloud-service-feign-8000/service-%d{yyyy-MM-dd}-%i.log">
             <Filters>
                 <!-- 大于等于该级别，匹配接收，不匹配拒绝 -->
                 <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
